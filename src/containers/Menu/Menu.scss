@@ -196,6 +196,9 @@
         position: relative;
         cursor: pointer;
     }
+    &__list-item.active::after {
+        width: 100%;
+    }
     &__list-item:hover::after{
         width: 100%;
     }

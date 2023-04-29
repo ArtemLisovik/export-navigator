@@ -5,7 +5,7 @@ import { H2, H3 } from "ui"
 import './ServicesPage.scss'
 import { SectionPromo } from "containers"
 
-import promo from 'assets/img/promo_services.jpg'
+import promo from 'assets/img/promo_services.webp'
 import { ServicesList } from "containers/ServicesList"
 
 export const ServicesPage = () => {

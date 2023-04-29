@@ -11,6 +11,7 @@ export const Img = ({src, alt, className}: ImgProps) => {
 
   return (
     <motion.img 
+    loading="lazy"
     className={className} 
     src={src} 
     alt={alt} 

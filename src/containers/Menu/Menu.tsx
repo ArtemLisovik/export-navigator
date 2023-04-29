@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 import { Dropdown, Submenu } from 'ui'
@@ -58,19 +58,19 @@ const DesktopMenu = () => {
     return (
         <motion.ul className='menu__list'>
             <motion.li className="menu__item">
-                <Link to='/services' className="menu__list-item">Services</Link>
+                <NavLink to='/services' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Services</NavLink>
             </motion.li>
 
             <motion.li className="menu__item">
-                <Link to='/about' className="menu__list-item">About</Link>
+                <NavLink to='/about' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>About</NavLink>
             </motion.li>
 
             <motion.li className="menu__item">
-                <Link to='/team' className="menu__list-item">Team</Link>
+                <NavLink to='/team' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Team</NavLink>
             </motion.li>
 
             <motion.li className="menu__item">
-                <Link to='/contacts' className="menu__list-item">Contacts</Link>
+                <NavLink to='/contacts' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Contacts</NavLink>
             </motion.li>
         </motion.ul>
     )
@@ -114,23 +114,23 @@ const BurgerMenu = () => {
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.1}>
-                                <Link to="/welcome" className="burger-menu__link">Welcome to ECO</Link>
+                                <NavLink to="/welcome" className="burger-menu__NavLink">Welcome to ECO</NavLink>
                             </motion.li>
                             <motion.li
                                 variants={investorsAnimation}
                                 custom={0.15}
                                 className="burger-menu__item">
-                                <Link to="/where-to-begin" className="burger-menu__link">С чего начать</Link>
+                                <NavLink to="/where-to-begin" className="burger-menu__NavLink">С чего начать</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.2}>
-                                <Link to="/tokens" className="burger-menu__link">Tokens</Link>
+                                <NavLink to="/tokens" className="burger-menu__NavLink">Tokens</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.25}>
-                                <Link to="/tokens-claim" className="burger-menu__link">Claim токенов</Link>
+                                <NavLink to="/tokens-claim" className="burger-menu__NavLink">Claim токенов</NavLink>
                             </motion.li>
 
             

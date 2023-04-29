@@ -1,4 +1,4 @@
-import { H2 } from "ui"
+import { H2, Img } from "ui"
 
 import './SectionPromo.scss'
 

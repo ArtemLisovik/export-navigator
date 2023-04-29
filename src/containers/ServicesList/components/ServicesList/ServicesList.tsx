@@ -1,9 +1,9 @@
 import { ServicesItem } from '../ServicesItem/ServicesItem'
 import './ServicesList.scss'
 
-import strategy from 'assets/img/strategy.jpg'
-import trainig from 'assets/img/training.jpg'
-import development from 'assets/img/development.jpg'
+import strategy from 'assets/img/strategy.webp'
+import trainig from 'assets/img/training.webp'
+import development from 'assets/img/development.webp'
 
 export const ServicesList = () => {
     return (

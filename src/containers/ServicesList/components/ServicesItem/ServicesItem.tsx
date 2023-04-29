@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
 import './ServicesItem.scss'
+import { Img } from "ui"
 
 type ServicesItemProps = {
     image: string,
@@ -12,7 +13,7 @@ type ServicesItemProps = {
 export const ServicesItem = ({image, title, descr, extraClass}: ServicesItemProps) => {
   return (
     <li className={`services-item ${extraClass}`}>
-        <img className='services-item__img' src={image} alt="image" />
+        <Img className='services-item__img' src={image} alt="image" />
         <div className="services-item__descr">
             <h4 className="services-item__title">{title}</h4>
             <p className="services-item__text">{descr}</p>

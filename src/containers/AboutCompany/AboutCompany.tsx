@@ -1,20 +1,16 @@
-import { H2, H3, Img } from 'ui'
-
-import './AboutCompany.scss'
-import { P } from 'ui/P/P'
+import { H2, H3, Img, P } from 'ui'
+import { SectionPromo } from 'containers'
 
 import poster from 'assets/img/about.png'
+import promo from 'assets/img/promo_about.webp'
+import './AboutCompany.scss'
 
 export const AboutCompany = () => {
     return (
         <>
-            <section className="about__promo">
-                <div className="about__promo-container container">
-                    <H2>Export Navigator <br /> Consulting Agency</H2>
-                </div>
-            </section>
 
             <section className="aboutCompany">
+            <SectionPromo title='Export Navigator Consulting Agency' img={promo}/>
                 <div className="aboutCompany__container container">
                     <div className="aboutCompany__descr">
                     <H3>
