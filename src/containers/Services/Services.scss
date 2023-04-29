@@ -1,0 +1,38 @@
+.services {
+    color: var(--color-text2);
+    text-align: center;
+    margin: 0 auto;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__list {
+        margin-top: 30px !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+        margin: 0 auto;
+        // max-width: ;
+
+    }
+
+    &__item {
+        text-align: start;
+        margin-bottom: 15px;
+        max-width: 300px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        line-height: 2;
+        color: #313131;
+    }
+}

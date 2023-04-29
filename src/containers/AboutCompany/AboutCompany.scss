@@ -1,0 +1,59 @@
+.about__promo {
+    background: url('../../assets/img/item2.jpg') no-repeat 50% 50%/100%;
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    &-container {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -30%);
+    }
+}
+
+.aboutCompany {
+    background: #fff;
+
+    &__container {
+        // text-align: center;
+        display: flex;
+        gap: 25px;
+    }
+    &__poster{
+        width: 50%;
+    }
+    &__poster img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &__descr {
+        width: 50%;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 300;
+        color: var(--color-text3);
+    }
+    &__text + .aboutCompany__text {
+        // margin-top: 20px;
+    }
+}
+
+.advantages {
+    background: #f6f6f6;
+}

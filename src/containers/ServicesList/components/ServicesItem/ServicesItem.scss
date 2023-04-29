@@ -1,0 +1,34 @@
+.services-item {
+    display: flex;
+    height: 380px;
+    background: rgb(242,242,242);
+    align-items: center;
+    overflow: hidden;
+    &.reversed img {
+        order: 2;
+    }
+    &__img {
+        width: 50%;
+    }
+    &__descr {
+        width: 50%;
+        padding: 70px;
+
+        a {
+            display: block;
+            color: var(--color-active);
+            margin-top: 20px;
+        }
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 2;
+        font-weight: 300;
+        color: var(--color-text3);
+    }
+}

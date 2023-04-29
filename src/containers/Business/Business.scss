@@ -1,0 +1,30 @@
+.business {
+    background: #f6f6f6;
+    &__container {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__collages {
+        margin-top: 60px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__collages-item {
+        max-width: calc(50% - 15px);
+        min-width: 300px;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+    }
+    &__collages-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s ease all;
+    }
+    &__collages-item:hover img {
+        transform: scale(1.1);
+    }
+}
