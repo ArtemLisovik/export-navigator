@@ -6,36 +6,20 @@
     h3 {
         text-align: center;
     }
-    label {
-        display: block;
-        margin-bottom: 2px;
-        width: 100%;
-    }
+    // label {
+    //     display: block;
+    //     margin-bottom: 2px;
+    //     width: 100%;
+    // }
 
     &__section {
         display: flex;
-        margin-top: 90px;
+        margin-top: 70px;
         gap: 20px;
         width: 100%;
     }
     &__section-inner {
         width: 50%;
-    }
-
-    input {
-        border-bottom: 1px solid var(--color-active);
-        transition: 0.3s ease all;
-        width: 100%;
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    textarea {
-        width: 100%;
-        resize: none;
-        background: none;
-        border: none;
-        border-bottom: 1px solid var(--color-active);
-        margin-bottom: 15px;
     }
 
     &__button {
@@ -45,9 +29,16 @@
         color: var(--color-text);
         transition: all 0.3s ease;
         cursor: pointer;
+        margin-top: 30px;
+
     }
     &__button:hover {
         background: var(--color-active);
     }
 
+}
+
+.error {
+    height: 10px;
+    color: red;
 }

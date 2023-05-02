@@ -2,13 +2,15 @@ import { motion } from 'framer-motion'
 
 import { buttonsReveal, imageReveal, textAnimation } from 'config/animation'
 
-import './Button.scss'
+import './LinkButton.scss'
+import { Link } from 'react-router-dom'
 
 type ButtonProps = {
   children: React.ReactNode,
-  type?: string
+  type?: string,
+  to: string;
 }
-export const Button = ({ children, type = '' }: ButtonProps) => {
+export const LinkButton = ({ children, type = '', to }: ButtonProps) => {
   return (
     <motion.div
       className={`button ${type}`}
@@ -19,7 +21,8 @@ export const Button = ({ children, type = '' }: ButtonProps) => {
       custom={0.2}
       variants={buttonsReveal}
       >
-      <span className='button__text'> {children}</span>
+        <Link className='button__text' to={to}>{children}</Link>
+      {/* <span className='button__text'> {children}</span> */}
     </motion.div>
   )
 }

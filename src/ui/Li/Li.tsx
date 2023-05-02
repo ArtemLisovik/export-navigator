@@ -13,7 +13,6 @@ export const Li = ({ children, className }: LiProps) => {
             initial='hidden'
             whileInView='visible'
             viewport={{ amount: 0.1, once: true }}
-            custom={0.2}
             variants={textAnimation}>
             {children}
         </motion.li>

@@ -15,7 +15,6 @@ export const H3 = ({children, color}: H3Props) => {
             initial='hidden'
             whileInView='visible'
             viewport={{ amount: 0.1, once: true }}
-            custom={0.2}
             style={{color: color}}
             variants={textAnimation}
             className="title-animated2">{children}

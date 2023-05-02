@@ -10,7 +10,6 @@ export const Header = () => {
     <div className="header">
       <div className="header__container container">
         <Link to="/" className="header__logo">
-          {/* <img src="" alt="logo" className="header__logo-images" /> */}
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="3171.4285714285716"
             height="1926.0971948193921" viewBox="0 0 3171.4285714285716 1926.0971948193921">
             <rect fill="#303841" width="3171.4285714285716" height="1926.0971948193921" />
@@ -21,7 +20,10 @@ export const Header = () => {
 
         </Link>
         <Menu />
-        <MySelect />
+        <div className="header__localization">
+          <MySelect/>
+        </div>
+
       </div>
     </div>
   )

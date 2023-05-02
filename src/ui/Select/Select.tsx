@@ -10,14 +10,7 @@ import ru from 'assets/img/ru.png'
 export const MySelect = () => {
   const [lang, setLang] = useState<string>()
 
-  useEffect(() => {
-    console.log(document.querySelector('.custom-select__menu'))
-    console.log(lang)
-  }, [lang])
-
   const handleSelectChange = (selectedOption: any) => {
-    // const selectedElement: any = document.querySelector(`.Select__option--${selectedOption}`);
-    console.log(selectedOption);
   }
 
   const options = [

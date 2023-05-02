@@ -40,12 +40,10 @@ export const Footer = () => {
         </nav>
 
         <div className="footer__contacts">
-          <h4 className="footer__contacts-title">Contacts:</h4>
-          <p className="footer__contacts-item">tel:
-            <a href="tel:+380954220414">
-              +380954220414</a> </p>
+          <h4 className="footer__contacts-title">Export Navigator</h4>
+          <p className="footer__contacts-item">tel: <a href="tel:+380954220414">+380954220414</a></p>
           <p className="footer__contacts-item">e-mail: <a href="mailto:export.navigator.org@gmail.com">
-            export.navigator.org@gmail.com
+          export.navigator.org@gmail.com
           </a>
           </p>
           <p className="footer__contacts-item">adress: district 53, office 1</p>

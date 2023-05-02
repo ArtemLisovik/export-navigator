@@ -24,8 +24,7 @@ export const Menu = () => {
     const [desktopMenu, setDesktopMenu] = useState(true)
 
     const getWindowSize = () => {
-        console.log(window.innerWidth)
-        if (window.innerWidth < 873) {
+        if (window.innerWidth < 700) {
             setDesktopMenu(false)
         } else {
             setDesktopMenu(true)
@@ -66,7 +65,7 @@ const DesktopMenu = () => {
             </motion.li>
 
             <motion.li className="menu__item">
-                <NavLink to='/team' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Team</NavLink>
+                <NavLink to='/team' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Our team</NavLink>
             </motion.li>
 
             <motion.li className="menu__item">
@@ -114,23 +113,23 @@ const BurgerMenu = () => {
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.1}>
-                                <NavLink to="/welcome" className="burger-menu__NavLink">Welcome to ECO</NavLink>
+                                <NavLink to="/servies" className="burger-menu__NavLink">Services</NavLink>
                             </motion.li>
                             <motion.li
                                 variants={investorsAnimation}
                                 custom={0.15}
                                 className="burger-menu__item">
-                                <NavLink to="/where-to-begin" className="burger-menu__NavLink">С чего начать</NavLink>
+                                <NavLink to="/about" className="burger-menu__NavLink">About</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.2}>
-                                <NavLink to="/tokens" className="burger-menu__NavLink">Tokens</NavLink>
+                                <NavLink to="/team" className="burger-menu__NavLink">Out team</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.25}>
-                                <NavLink to="/tokens-claim" className="burger-menu__NavLink">Claim токенов</NavLink>
+                                <NavLink to="/contacts" className="burger-menu__NavLink">Contacts</NavLink>
                             </motion.li>
 
             

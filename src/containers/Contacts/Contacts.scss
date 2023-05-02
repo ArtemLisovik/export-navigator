@@ -4,7 +4,11 @@
 
 .contacts {
     background: #f8f6ee;
-    margin-bottom: 270px;
+    margin-bottom: 310px;
+
+    @media(max-width: 1074px) {
+        margin-bottom: 650px;
+    }
 
     &__container {
         position: relative;
@@ -17,9 +21,26 @@
         max-width: 500px;
         width: 100%;
         padding: 40px;
+        @media(max-width: 1074px) {
+            left: 10px;
+            top: 200px;
+            width: auto;
+        }
+        @media(max-width: 812px) {
+            top: 300px;
+        }
+        @media(max-width: 479px) {
+            top: 400px;
+        } 
+        @media(max-width: 402px) {
+            top: 500px;
+        } 
     }
     &__title{
         max-width: 45%;
+        @media(max-width: 1074px) {
+            max-width: 100%;
+        }
         h3 {
             text-align: start;
         }

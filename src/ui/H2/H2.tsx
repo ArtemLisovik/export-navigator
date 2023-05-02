@@ -15,7 +15,7 @@ export const H2 = ({children, color}: H2Props) => {
             initial='hidden'
             whileInView='visible'
             viewport={{ amount: 0.1, once: true }}
-            custom={0.2}
+            // custom={0.2}
             variants={textAnimation}
             style={color}
             className="title-animated">{children}

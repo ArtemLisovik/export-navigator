@@ -3,7 +3,7 @@ import { H2 } from 'ui'
 import './Business.scss'
 
 import image1 from 'assets/img/item1.jpg'
-import image2 from 'assets/img/promo_about.webp'
+import image2 from 'assets/img/about_promo.webp'
 
 export const Business = () => {
   return (

@@ -1,4 +1,4 @@
-import { Button, H2 } from 'ui'
+import { LinkButton, H2 } from 'ui'
 
 import './Services.scss'
 import { Li } from 'ui/Li/Li'
@@ -25,7 +25,7 @@ export const Services = () => {
                 </Li>
             </ul>
 
-            <Button type='dark'>Our Offering</Button>
+            <LinkButton to='/services' type='dark'>Our Offering</LinkButton>
         </div>
     </section>
   )
