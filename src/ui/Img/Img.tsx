@@ -1,4 +1,4 @@
-import { imageReveal } from "config/animation"
+import { imageReveal, textAnimation } from "config/animation"
 import { motion } from "framer-motion"
 
 type ImgProps = {
@@ -18,7 +18,7 @@ export const Img = ({src, alt, className}: ImgProps) => {
     initial='hidden'
     whileInView='visible'
     viewport={{ amount: 0.1, once: true }}
-    variants={imageReveal}
+    variants={textAnimation}
     />
   )
 }

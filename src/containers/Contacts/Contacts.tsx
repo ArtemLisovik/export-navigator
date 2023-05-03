@@ -34,14 +34,14 @@ export const Contacts = () => {
                             Our Contact Info
                         </H3>
                         <P className="location__info-item">
-                            <a href="tel:+416 887 5555">416 887 5555</a>
+                            <a href="tel:+380954220414">+380954220414</a>
                         </P>
                         <P className="location__info-item">123 address st.</P>
                         <P className="location__info-item">
-                            <a href="mailto:email@example.com">email@example.com</a>
+                            <a href="mailto:export.navigator.org@gmail.com">e-mail:<br/>export.navigator.org@gmail.com</a>
                         </P>
                         <P className="location__info-item">
-                            <a href="yourwebsite.com">yourwebsite.com</a>
+                            <a target='_blank' href="exportnavigator.org">www.exportnavigator.org.com</a>
                         </P>
                     </div>
                     <div className="location__map">

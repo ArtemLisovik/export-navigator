@@ -16,10 +16,9 @@
 
     }
     &__logo {
-        width: max-content;
         height: 50px;
         display: block;
-        aspect-ratio: auto;
+        width: 100px;
     }
     &__logo svg {
         object-fit: cover;

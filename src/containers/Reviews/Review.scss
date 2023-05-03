@@ -1,0 +1,38 @@
+.feedback {
+    text-align: center;
+
+    &__avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    &__avatar img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden
+    }
+    &__decor {
+        width: 25px;
+        height: 37px;
+        margin: 0 auto;
+    }
+    &__decor svg {
+        margin-top: 25px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        fill: #6f88fc;
+    }
+    &__text {
+        margin-top: 25px;
+        font-style: italic;
+        font-weight: 300;
+        color: var(--color-text3);
+    }
+    &__title {
+        margin-top: 25px;
+        font-weight: 700;
+    }
+}

@@ -33,6 +33,7 @@
 
     &__text {
         line-height: 2;
-        color: #313131;
+        color: var(--color-text3);
+        font-weight: 300;
     }
 }
