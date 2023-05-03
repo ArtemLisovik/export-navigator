@@ -113,23 +113,23 @@ const BurgerMenu = () => {
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.1}>
-                                <NavLink to="/servies" className="burger-menu__NavLink">Services</NavLink>
+                                <NavLink to="/services" className="burger-menu__link">Services</NavLink>
                             </motion.li>
                             <motion.li
                                 variants={investorsAnimation}
                                 custom={0.15}
                                 className="burger-menu__item">
-                                <NavLink to="/about" className="burger-menu__NavLink">About</NavLink>
+                                <NavLink to="/about" className="burger-menu__link">About</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.2}>
-                                <NavLink to="/team" className="burger-menu__NavLink">Out team</NavLink>
+                                <NavLink to="/team" className="burger-menu__link">Out team</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
                                 variants={investorsAnimation}
                                 custom={0.25}>
-                                <NavLink to="/contacts" className="burger-menu__NavLink">Contacts</NavLink>
+                                <NavLink to="/contacts" className="burger-menu__link">Contacts</NavLink>
                             </motion.li>
 
             
