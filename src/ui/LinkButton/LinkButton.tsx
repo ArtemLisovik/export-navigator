@@ -13,16 +13,18 @@ type ButtonProps = {
 export const LinkButton = ({ children, type = '', to }: ButtonProps) => {
   return (
     <motion.div
-      className={`button ${type}`}
+      className="button__wrapper"
       initial='hidden'
       whileInView='visible'
-      transition={{ease: "easeOut"}}
+      transition={{ ease: "easeOut" }}
       viewport={{ amount: 0.1, once: true }}
       custom={0.2}
-      variants={buttonsReveal}
+      variants={textAnimation}>
+      <div
+        className={`button ${type}`}
       >
         <Link className='button__text' to={to}>{children}</Link>
-      {/* <span className='button__text'> {children}</span> */}
+      </div>
     </motion.div>
   )
 }

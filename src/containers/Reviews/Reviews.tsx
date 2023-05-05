@@ -11,8 +11,29 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './Reviews.scss'
+import { useEffect, useState } from 'react';
 
 export const Reviews = () => {
+  const [slidersPerView, setSlidersPerView] = useState<number>(3)
+
+
+  const getWindowSize = () => {
+    if (window.innerWidth < 700) {
+      setSlidersPerView(2)
+    } else {
+      setSlidersPerView(3)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', getWindowSize);
+
+    return () => {
+        window.removeEventListener('resize', getWindowSize);
+    };
+}, [slidersPerView]);
+
+
   return (
     <section className="reviews">
       <div className="reviews__container container">
@@ -20,16 +41,25 @@ export const Reviews = () => {
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={3}
-          navigation
+          slidesPerView={slidersPerView}
+          navigation={false}
           pagination={{ clickable: true }}
-          // scrollbar={{ draggable: false }}
+          scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
         >
           <SwiperSlide>
             <Review />
           </SwiperSlide>
+          <SwiperSlide
+          ><Review /></SwiperSlide>
+          <SwiperSlide><Review /></SwiperSlide>
+          <SwiperSlide><Review /></SwiperSlide>
+          <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           {/* <SwiperSlide>Slide 4</SwiperSlide> */}
