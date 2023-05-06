@@ -2,22 +2,11 @@ import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-import { Dropdown, Submenu } from 'ui'
+import { deskTopMenuReveal, fromLeftToRight, textAnimation } from 'config/animation'
+import { menuConfig } from './config/menuConfig'
 
 import './Menu.scss'
 
-
-const investorsAnimation = {
-    hidden: {
-        x: '-30px',
-        opacity: 0
-    },
-    visible: (custom: number) => ({
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.5, ease: 'easeInOut', delay: custom }
-    })
-}
 
 
 export const Menu = () => {
@@ -52,28 +41,28 @@ export const Menu = () => {
     )
 }
 
+
 const DesktopMenu = () => {
 
+    const menuList = Object.entries(menuConfig)
+    const view = menuList.map((menuItem, index) => {
+        return <li 
+            style={{animation: `menuReveal 0.5s ease ${index/15}s`, animationFillMode: `forwards`}}
+            key={menuItem[0]} 
+            className="menu__item">
+            <NavLink to={menuItem[1]} className={({ isActive }: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>{menuItem[0]}</NavLink>
+        </li>
+    })
+
+
     return (
-        <motion.ul className='menu__list'>
-            <motion.li className="menu__item">
-                <NavLink to='/services' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Services</NavLink>
-            </motion.li>
-
-            <motion.li className="menu__item">
-                <NavLink to='/about' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>About</NavLink>
-            </motion.li>
-
-            <motion.li className="menu__item">
-                <NavLink to='/team' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Our team</NavLink>
-            </motion.li>
-
-            <motion.li className="menu__item">
-                <NavLink to='/contacts' className={({isActive}: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>Contacts</NavLink>
-            </motion.li>
-        </motion.ul>
+        <ul 
+        className="menu__list">
+            {view}
+        </ul>
     )
 }
+
 
 const BurgerMenu = () => {
     const [menuActive, setMenuActive] = useState(false)
@@ -85,6 +74,16 @@ const BurgerMenu = () => {
             (document.querySelector('body') as HTMLBodyElement).style.overflow = 'scroll'
         }
     }, [menuActive])
+
+    const menuList = Object.entries(menuConfig)
+    const view = menuList.map((menuItem, index) => {
+        return <li 
+            style={{animation: `menuReveal 0.5s ease ${index/15}s`, animationFillMode: `forwards`}}
+            key={menuItem[0]} 
+            className="burger-menu__item">
+            <NavLink to={menuItem[1]} className={({ isActive }: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>{menuItem[0]}</NavLink>
+        </li>
+    })
 
 
     return (
@@ -105,35 +104,41 @@ const BurgerMenu = () => {
                 <div
                     className={menuActive ? `burger-menu__list active` : `burger-menu__list`}>
 
-                    {menuActive && <>
-                        <motion.ul className="burger-menu__category"
+                    {menuActive && 
+                    <>
+                        {/* <motion.ul className="burger-menu__category"
                             initial='hidden'
                             animate='visible'
                             viewport={{ amount: 0.6, once: true }}>
                             <motion.li className="burger-menu__item"
-                                variants={investorsAnimation}
+                                variants={fromLeftToRight}
                                 custom={0.1}>
                                 <NavLink to="/services" className="burger-menu__link">Services</NavLink>
                             </motion.li>
                             <motion.li
-                                variants={investorsAnimation}
+                                variants={fromLeftToRight}
                                 custom={0.15}
                                 className="burger-menu__item">
                                 <NavLink to="/about" className="burger-menu__link">About</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
-                                variants={investorsAnimation}
+                                variants={fromLeftToRight}
                                 custom={0.2}>
                                 <NavLink to="/team" className="burger-menu__link">Out team</NavLink>
                             </motion.li>
                             <motion.li className="burger-menu__item"
-                                variants={investorsAnimation}
+                                variants={fromLeftToRight}
                                 custom={0.25}>
                                 <NavLink to="/contacts" className="burger-menu__link">Contacts</NavLink>
                             </motion.li>
 
-            
-                        </motion.ul></>}
+
+                        </motion.ul> */}
+
+                        <ul className="burger-menu__category">
+                            {view}
+                        </ul>
+                    </>}
 
                 </div>
             </nav>

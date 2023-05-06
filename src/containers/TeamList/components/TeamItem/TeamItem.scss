@@ -1,0 +1,44 @@
+.team-member {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    opacity: 0;
+
+    &:hover .team-member__info {
+        height: 60px;
+        padding: 10px 15px;
+    }
+    &:hover .team-member__photo img {
+        transform: scale(1.15);
+    }
+    &__photo {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__photo img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+    &__info {
+        position: absolute;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($color: #000000, $alpha: .5);
+        color: var(--color-text);
+        padding: 0px 15px;
+        transition: all 0.3s ease;
+    }
+    &__name{
+        font-weight: 600;
+    }
+    &__descr {
+        font-size: 14px;
+    }
+}
+
+

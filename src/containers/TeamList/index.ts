@@ -1,0 +1,1 @@
+export {TeamList} from './components/TeamList/TeamList'

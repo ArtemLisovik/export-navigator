@@ -1,4 +1,4 @@
-import { Promo, SectionPromo } from "containers"
+import { Promo, SectionPromo, TeamList } from "containers"
 import { PrimaryLayout } from "layouts/PrimaryLayout"
 
 import promo from 'assets/img/promo.webp'
@@ -15,8 +15,8 @@ export const TeamPage = () => {
       <PrimaryLayout>
         <section className="team">
           <SectionPromo title='Our team' img={promo} />
-          <div className="team__container">
-
+          <div className="team__container container">
+            <TeamList/>
           </div>
         </section>
       </PrimaryLayout>

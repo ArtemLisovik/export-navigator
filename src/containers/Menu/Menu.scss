@@ -147,9 +147,8 @@
     }
     &__item{
         font-size: 20px;
-    }
-    &__item {
         margin-top: 16px;
+        opacity: 0;
     }
     &__submenu {
         text-decoration: none;
@@ -187,7 +186,11 @@
         display: flex;
         justify-content: center;
         gap: 40px;
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    &__item{
+        opacity: 0;
     }
     &__list-item {
         text-decoration: none;
@@ -195,6 +198,8 @@
         transition: 0.3s all ease;
         position: relative;
         cursor: pointer;
+
+        // visibility: hidden;
     }
     &__list-item.active::after {
         width: 100%;
@@ -213,5 +218,17 @@
         background: var(--color-active);
         transition: 0.3s all ease;
 
+    }
+}
+
+
+@keyframes menuReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }

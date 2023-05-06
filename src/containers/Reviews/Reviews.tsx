@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -39,30 +39,24 @@ export const Reviews = () => {
       <div className="reviews__container container">
         <Swiper
           // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={slidersPerView}
           navigation={false}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
           autoplay={{
             delay: 2500,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
         >
-          <SwiperSlide>
-            <Review />
-          </SwiperSlide>
-          <SwiperSlide
-          ><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
-          {/* <SwiperSlide>Slide 4</SwiperSlide> */}
+          <SwiperSlide><Review /></SwiperSlide>
+          <SwiperSlide><Review /></SwiperSlide>
         </Swiper>
       </div>
     </section>
