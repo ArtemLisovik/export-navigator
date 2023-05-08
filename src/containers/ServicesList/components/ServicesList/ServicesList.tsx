@@ -4,44 +4,50 @@ import './ServicesList.scss'
 import strategy from 'assets/img/strategy.webp'
 import trainig from 'assets/img/training.webp'
 import development from 'assets/img/development.webp'
+import { useTranslation } from 'react-i18next'
+
 
 export const ServicesList = () => {
+    const { t } = useTranslation()
+
+
     return (
         <ul className="services-list">
-            {/* <ServicesItem
-                image={strategy}
-                title='Strategic business planning'
-                descr='Our professional consultants will assess your current situation and help you redefine your vision. Subsequently, they will create and execute a strategic plan on how to achieve the vision.' /> */}
 
             <ServicesItem
                 extraClass='reversed'
                 image={development}
-                title='Integrated company export project managment'
+                title={t('main.pages.services.first.subtitle')}
                 descr={
                     [
-                        "- analysis of sales markets;",
-                        "- identification of the company's advantages over foreign competitors;",
-                        "- determination of optimal sales channels, methods of marketing communications;",
-                        "- substantiation of marketing decisions;",
-                        "- determination of the competitiveness of companies in a particular market.",
-                        "- benchmarking.",
-                        "- Product management."
+                        t('main.pages.services.first.text1'),
+                        t('main.pages.services.first.text2'),
+                        t('main.pages.services.first.text3'),
+                        t('main.pages.services.first.text4'),
+                        t('main.pages.services.first.text5'),
+                        t('main.pages.services.first.text6'),
+                        t('main.pages.services.first.text7'),
+                        t('main.pages.services.first.text8'),
+                        t('main.pages.services.first.text9'),
+                        t('main.pages.services.first.text10')
                     ]
                 }
 
             />
             <ServicesItem
                 image={trainig}
-                title='Marketing analysis for export'
-                descr={[
-                    "- analysis of sales markets;",
-                    "- identification of the company's advantages over foreign competitors;",
-                    "- determination of optimal sales channels, methods of marketing communications;",
-                    "- substantiation of marketing decisions;",
-                    "- determination of the competitiveness of companies in a particular market.",
-                    "- benchmarking.",
-                    "- Product management."
-                ]} />
+                title={t('main.pages.services.second.subtitle')}
+                descr={
+                    [
+                        t('main.pages.services.second.text1'),
+                        t('main.pages.services.second.text2'),
+                        t('main.pages.services.second.text3'),
+                        t('main.pages.services.second.text4'),
+                        t('main.pages.services.second.text5'),
+                        t('main.pages.services.second.text6'),
+                        t('main.pages.services.second.text7'),
+                    ]
+                } />
         </ul>
     )
 }

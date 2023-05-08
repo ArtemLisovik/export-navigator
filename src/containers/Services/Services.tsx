@@ -2,30 +2,34 @@ import { LinkButton, H2 } from 'ui'
 
 import './Services.scss'
 import { Li } from 'ui/Li/Li'
+import { useTranslation } from 'react-i18next'
 
 export const Services = () => {
+
+    const {t} = useTranslation()
+
   return (
     <section className="services">
         <div className="services__container container">
             <H2 color={{color: 'rgb(17,17,17)'}}>
-                Our business consulting services include:
+                {t("main.pages.home.services.title")}
             </H2>
             <ul className="services__list">
                 <Li className="services__item">
-                    <h3 className="services__title">Strategic business planning in export</h3>
-                    <p className="services__text">Our professional consultants will assess your current situation and help you redefine your vision. Subsequently, they will create and execute a strategic plan for export direction.</p>
+                    <h3 className="services__title">{t("main.pages.home.services.first.subtitle")}</h3>
+                    <p className="services__text">{t("main.pages.home.services.first.text")}</p>
                 </Li>
                 <Li className="services__item">
-                    <h3 className="services__title">Marketing analysis for export</h3>
-                    <p className="services__text">Our team helps you to analyze sales markets, identify the company's advantages over foreign competitors, and determine optimal sales channels as well as the  methods of marketing communications.</p>
+                    <h3 className="services__title">{t("main.pages.home.services.second.subtitle")}</h3>
+                    <p className="services__text">{t("main.pages.home.services.second.text")}</p>
                 </Li>
                 <Li className="services__item">
-                    <h3 className="services__title">Integrated management of the company's export project</h3>
-                    <p className="services__text">We offer complete solutions, such as outsource your export department or parts of markets that are not covered by your export destination.</p>
+                    <h3 className="services__title">{t("main.pages.home.services.third.subtitle")}</h3>
+                    <p className="services__text">{t("main.pages.home.services.third.text")}</p>
                 </Li>
             </ul>
 
-            <LinkButton to='/services' type='dark'>Our Offering</LinkButton>
+            <LinkButton to='/services' type='dark'>{t("main.pages.home.services.button")}</LinkButton>
         </div>
     </section>
   )

@@ -1,6 +1,6 @@
 // import Swiper core and required modules
+import { useEffect, useState } from 'react'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Review } from './Review';
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './Reviews.scss'
-import { useEffect, useState } from 'react';
+
 
 export const Reviews = () => {
   const [slidersPerView, setSlidersPerView] = useState<number>(3)

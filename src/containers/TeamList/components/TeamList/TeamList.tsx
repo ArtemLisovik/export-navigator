@@ -7,8 +7,11 @@ import { db } from 'config/firebase'
 import './TeamList.scss'
 import { useEffect, useState } from 'react'
 import { Loader } from 'ui/Loader/Loader'
+import { useTranslation } from 'react-i18next'
 
 export const TeamList = () => {
+
+    const {t} = useTranslation()
     const [teammates, setTeammates] = useState<[]>()
 
     useEffect(() => {
@@ -32,7 +35,7 @@ export const TeamList = () => {
 
     return (
         <div className="team-list">
-            <H2 color={{ color: 'var(--color-text2)' }}>Export Navigator team of professional</H2>
+            <H2 color={{ color: 'var(--color-text2)' }}>{t("main.pages.team.subtitle")}</H2>
             <ul className="team-list__list">
                 {view ? view : <Loader/>}
             </ul>

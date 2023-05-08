@@ -7,9 +7,11 @@ import { FormTextArea} from './components/FormTextArea/FormTextArea'
 
 import './Form.scss'
 import { IData, sendMessageTelegram } from './helpers/telegram'
+import { useTranslation } from 'react-i18next'
 
 
 export const Form = () => {
+    const {t} = useTranslation()
 
     const methods = useForm<IData>({
         resolver: yupResolver(schema),
@@ -27,23 +29,23 @@ export const Form = () => {
         <FormProvider {...methods}>
             <form className='form' onSubmit={handleSubmit(onHandleSubmit)}>
                 <H3 color='rgb(17, 17, 17)'>
-                    Let's Connect
+                {t('main.pages.contacts.form.title')}
                 </H3>
                 <div className="form__section">
                     <div className="form__section-inner">
-                        <FormInput inputName='firstName' placeholder='First name' />
+                        <FormInput inputName='firstName' placeholder={t('main.pages.contacts.form.name')} />
                     </div>
                     <div className="form__section-inner">
-                        <FormInput inputName='lastName' placeholder='Last name' />
+                        <FormInput inputName='lastName' placeholder={t('main.pages.contacts.form.surname')} />
 
                     </div>
                 </div>
                 <FormInput inputName='email' placeholder='Email' />
-                <FormInput inputName='phone' type='number' placeholder='Phone number' />
+                <FormInput inputName='phone' type='number' placeholder={t('main.pages.contacts.form.phone')} />
 
-                <FormTextArea inputName='message' placeholder='Enter your message' />
+                <FormTextArea inputName='message' placeholder={t('main.pages.contacts.form.message')} />
 
-                <button className='form__button'>Send Message</button>
+                <button className='form__button'>{t('main.pages.contacts.form.button')}</button>
 
             </form>
         </FormProvider>

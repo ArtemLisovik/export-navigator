@@ -8,18 +8,21 @@ import { SectionPromo } from "containers"
 import promo from 'assets/img/promo_services.webp'
 import { ServicesList } from "containers/ServicesList"
 import { Helmet } from "react-helmet"
+import { useTranslation } from "react-i18next"
 
 export const ServicesPage = () => {
+  const {t} = useTranslation()
   return (
     <>
       <Helmet>
-        <title>Our team</title>
+        <title>Our services</title>
       </Helmet>
       <PrimaryLayout>
         <section className="company-services">
-          <SectionPromo title='Our services' img={promo} />
+          <SectionPromo title={t("main.pages.services.title")} img={promo} />
           <div className="company-services__container container">
-            <H3>We help businesses redefine their goals, vision, and mission to create growth-driven strategic plans.
+            <H3>
+              {t("main.pages.services.subtitle")}
             </H3>
             <ServicesList />
           </div>

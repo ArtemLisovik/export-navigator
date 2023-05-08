@@ -3,8 +3,10 @@ import { Promo, About, Services, Business } from "containers"
 import { PrimaryLayout } from "../layouts/PrimaryLayout"
 import { Reviews } from "containers/Reviews/Reviews"
 import { Helmet } from "react-helmet"
+import { useTranslation } from "react-i18next"
 
 export const MainPage = () => {
+  const {t} = useTranslation()
   return (
     <>
     <Helmet>

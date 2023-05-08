@@ -10,4 +10,4 @@ export type ColourOption = {
     { label: 'Blue', color: '#0000FF' },
     { label: 'Yellow', color: '#FFFF00' },
     { label: 'Purple', color: '#800080' },
-  ];
+  ]

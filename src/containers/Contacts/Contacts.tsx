@@ -2,10 +2,11 @@ import { H3, P } from 'ui'
 import './Contacts.scss'
 import { Form } from 'containers'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 
 export const Contacts = () => {
-
+    const { t } = useTranslation()
 
     return (
         <div className='contactsPage__wrapper'>
@@ -13,14 +14,14 @@ export const Contacts = () => {
                 <div className="contacts__container container">
                     <div className="contacts__title">
                         <H3>
-                            Looking for professional business consultants? Contact Export Navigator to set up a meeting with our experienced experts.
+                            {t('main.pages.contacts.title')}
                         </H3>
                     </div>
-                    <motion.div 
-                    className="contacts__form"
-                    initial={{y: '30vh', opacity: 0}}
-                    transition={{duration: 0.7}}
-                    animate={{y: '0', opacity: 1}}
+                    <motion.div
+                        className="contacts__form"
+                        initial={{ y: '30vh', opacity: 0 }}
+                        transition={{ duration: 0.7 }}
+                        animate={{ y: '0', opacity: 1 }}
                     >
                         <Form />
                     </motion.div>
@@ -31,14 +32,14 @@ export const Contacts = () => {
                 <div className="location__container container">
                     <div className="location__info">
                         <H3 color='rgb(17,17,17)'>
-                            Our Contact Info
+                            {t('main.pages.contacts.subtitle')}
                         </H3>
                         <P className="location__info-item">
                             <a href="tel:+380954220414">+380954220414</a>
                         </P>
                         <P className="location__info-item">123 address st.</P>
                         <P className="location__info-item">
-                            <a href="mailto:export.navigator.org@gmail.com">e-mail:<br/>export.navigator.org@gmail.com</a>
+                            <a href="mailto:export.navigator.org@gmail.com">e-mail:<br />export.navigator.org@gmail.com</a>
                         </P>
                         <P className="location__info-item">
                             <a target='_blank' href="exportnavigator.org">www.exportnavigator.org.com</a>

@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react'
 import { DocumentData, doc, getDoc} from "firebase/firestore"; 
 
 import {db} from 'config/firebase'
-import { Logo, Menu } from 'containers'
+import { Logo } from 'containers'
+import {DesktopMenu} from 'containers/Menu/Menu'
 
 import './Footer.scss'
 
@@ -28,7 +29,7 @@ export const Footer = () => {
         <Logo />
 
         <nav className="footer__nav">
-          <Menu/>
+          <DesktopMenu/>
         </nav>
 
         <div className="footer__contacts">

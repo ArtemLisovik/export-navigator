@@ -1,5 +1,5 @@
 import Select from 'react-select'
-import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import './Select.scss'
 
@@ -8,9 +8,11 @@ import eng from 'assets/img/en.png'
 import ru from 'assets/img/ru.png'
 
 export const MySelect = () => {
-  const [lang, setLang] = useState<string>()
+ 
+  const { i18n } = useTranslation()
 
   const handleSelectChange = (selectedOption: any) => {
+    i18n.changeLanguage(selectedOption.value)
   }
 
   const options = [
@@ -40,18 +42,20 @@ export const MySelect = () => {
         ...styles,
         backgroundColor: isFocused ? "#999999" : null,
       };
+      
     }
   }
 
+
   return (
     <Select
-      classNamePrefix='custom-select'    
-      defaultValue={options[0]}
-      onChange={(e: any) => handleSelectChange(e.target)}
+      classNamePrefix='custom-select'
+      defaultValue={options.filter(option => option.value === document.cookie.split('=')[1])[0]}
+      onChange={(local: any) => handleSelectChange(local)}
       isSearchable={false}
       styles={colorStyles}
+      options={options}
       
-    
-      options={options} />
+       />
   )
 }

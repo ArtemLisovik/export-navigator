@@ -7,7 +7,7 @@ import { CustomLink } from "ui/CustomLink/CustomLink"
 type ServicesItemProps = {
     image: string,
     title: string,
-    descr: string[],
+    descr: any[],
     extraClass?: null | 'reversed'
 }
 

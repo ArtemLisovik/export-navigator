@@ -5,8 +5,10 @@ import promo from 'assets/img/promo.webp'
 
 import './TeamPage.scss'
 import { Helmet } from "react-helmet"
+import { useTranslation } from "react-i18next"
 
 export const TeamPage = () => {
+  const {t} = useTranslation()
   return (
     <>
       <Helmet>
@@ -14,7 +16,7 @@ export const TeamPage = () => {
       </Helmet>
       <PrimaryLayout>
         <section className="team">
-          <SectionPromo title='Our team' img={promo} />
+          <SectionPromo title={t("main.pages.team.title")} img={promo} />
           <div className="team__container container">
             <TeamList/>
           </div>
