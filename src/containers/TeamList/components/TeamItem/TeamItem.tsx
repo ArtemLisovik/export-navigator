@@ -1,14 +1,15 @@
 import './TeamItem.scss'
 
-import avatar from 'assets/img/avatar.jpg'
+import noAvatar from 'assets/img/avatar.jpg'
 
 
 type TeamItemProps = {
     name: string,
     info: string,
-    delay?: number
+    delay?: number,
+    avatar?: string
 }
-export const TeamItem = ({ name, info, delay }: TeamItemProps) => {
+export const TeamItem = ({ name, info, delay, avatar }: TeamItemProps) => {
     return (
         <li className="team-member"
             style={{
@@ -17,7 +18,7 @@ export const TeamItem = ({ name, info, delay }: TeamItemProps) => {
 
             }}>
             <div className="team-member__photo">
-                <img src={avatar} alt="Member's avatar" />
+                <img loading='lazy' src={avatar ? avatar : noAvatar} alt="Member's avatar" />
             </div>
             <div className="team-member__info">
                 <h4 className="team-member__name">{name}</h4>

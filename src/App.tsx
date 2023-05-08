@@ -8,6 +8,8 @@ import HttpApi from 'i18next-http-backend'
 import './styles/reset.scss'
 import './styles/base.scss'
 import './styles/variables.scss'
+import { Provider } from 'react-redux';
+import { store } from 'store/store';
 
 
 i18n
@@ -27,9 +29,11 @@ i18n
 function App() {
 
   return (
-    <BrowserRouter>
+    <Provider store={store}>
+       <BrowserRouter>
       <Routings />
     </BrowserRouter>
+    </Provider>
   );
 }
 
