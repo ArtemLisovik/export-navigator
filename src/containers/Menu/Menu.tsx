@@ -49,7 +49,6 @@ export const Menu = () => {
 export const DesktopMenu = () => {
 
     const lang = document.cookie.split('=')[1] as menuType
-    console.log(lang)
     const menuList = Object.entries(menuConfig[lang])
     const view = menuList.map((menuItem, index) => {
         return <li 
@@ -81,13 +80,14 @@ const BurgerMenu = () => {
         }
     }, [menuActive])
 
-    const menuList = Object.entries(menuConfig)
+    const lang = document.cookie.split('=')[1] as menuType
+    const menuList = Object.entries(menuConfig[lang])
     const view = menuList.map((menuItem, index) => {
         return <li 
             style={{animation: `menuReveal 0.5s ease ${index/15}s`, animationFillMode: `forwards`}}
             key={menuItem[0]} 
             className="burger-menu__item">
-            <NavLink to={menuItem[1]} className={({ isActive }: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>{menuItem[0]}</NavLink>
+            <NavLink to={menuItem[1] as string} className={({ isActive }: any) => isActive ? "menu__list-item active" : 'menu__list-item'}>{menuItem[0]}</NavLink>
         </li>
     })
 
