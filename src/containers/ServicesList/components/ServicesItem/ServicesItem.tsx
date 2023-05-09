@@ -19,7 +19,7 @@ export const ServicesItem = ({image, title, descr, extraClass}: ServicesItemProp
 
   return (
     <li className={`services-item ${extraClass}`}>
-        <Img className='services-item__img' src={image} alt="image" />
+        <Img className='services-item__img' src={image} alt="poster img" />
         <div className="services-item__descr">
             <H4>{title}</H4>
             {view}
