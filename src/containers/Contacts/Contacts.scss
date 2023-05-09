@@ -23,17 +23,18 @@
         padding: 40px;
         @media(max-width: 1074px) {
             left: 10px;
-            top: 200px;
+            top: 230px;
             width: auto;
+            right: 10px;
         }
         @media(max-width: 812px) {
             top: 300px;
         }
-        @media(max-width: 479px) {
-            top: 400px;
+        @media(max-width: 460px) {
+            top: 440px;
         } 
-        @media(max-width: 402px) {
-            top: 500px;
+        @media(max-width: 358px) {
+            top: 550px;
         } 
     }
     &__title{
