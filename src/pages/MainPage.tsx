@@ -1,7 +1,7 @@
 
 import { Promo, About, Services, Business } from "containers"
 import { PrimaryLayout } from "../layouts/PrimaryLayout"
-import { Reviews } from "containers/Reviews/Reviews"
+import { Reviews } from "containers/Reviews/components/Reviews"
 import { Helmet } from "react-helmet"
 import { useTranslation } from "react-i18next"
 

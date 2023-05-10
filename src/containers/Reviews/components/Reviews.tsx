@@ -11,10 +11,18 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './Reviews.scss'
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from 'store/store';
+import { getReviews } from '../store/reviewsThunk';
+import { Loader } from 'ui';
 
 
 export const Reviews = () => {
   const [slidersPerView, setSlidersPerView] = useState<number>(3)
+
+  const dispatch = useDispatch<AppDispatch>()
+
+  const { loading, reviews } = useSelector((state: RootState) => state.reviews)
 
 
   const getWindowSize = () => {
@@ -26,12 +34,25 @@ export const Reviews = () => {
   }
 
   useEffect(() => {
+    dispatch(getReviews())
+  }, [])
+
+  useEffect(() => {
     window.addEventListener('resize', getWindowSize);
 
     return () => {
-        window.removeEventListener('resize', getWindowSize);
+      window.removeEventListener('resize', getWindowSize);
     };
-}, [slidersPerView]);
+  }, [slidersPerView]);
+
+
+  const view = reviews?.map((item, index) => {
+    return <SwiperSlide><Review
+      name={item.name}
+      message={item.message}
+      avatar={item.avatar}
+      key={index} /></SwiperSlide>
+  })
 
 
   return (
@@ -50,13 +71,14 @@ export const Reviews = () => {
             disableOnInteraction: true,
           }}
         >
+          {loading ? <Loader /> : view}
+          {/* <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
           <SwiperSlide><Review /></SwiperSlide>
-          <SwiperSlide><Review /></SwiperSlide>
-          <SwiperSlide><Review /></SwiperSlide>
+          <SwiperSlide><Review /></SwiperSlide> */}
         </Swiper>
       </div>
     </section>
